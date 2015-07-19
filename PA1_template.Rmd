@@ -2,6 +2,10 @@
 title: "Reproducible Research Assignment 1"
 ---
 
+```{r}
+chunk_opts$set(echo = TRUE, message = FALSE, cache = TRUE, cache.path = "cache/", fig.path = "figure/")
+```
+
 ## Loading and preprocessing the data
 
 The data was unzipped and loaded into R using following:
