@@ -2,15 +2,6 @@
 title: "Reproducible Research Assignment 1"
 ---
 
-
-```r
-chunk_opts$set(echo = TRUE, message = FALSE, cache = TRUE, cache.path = "cache/", fig.path = "figure/")
-```
-
-```
-## Error in eval(expr, envir, enclos): object 'chunk_opts' not found
-```
-
 ## Loading and preprocessing the data
 
 The data was unzipped and loaded into R using following:
@@ -31,7 +22,7 @@ TotalSteps<-summarize(activity, steps=sum(steps,na.rm=TRUE))
 hist(TotalSteps$steps, breaks=61, main="Total Steps Taken Per Day", xlab="# Steps")
 ```
 
-![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-1.png) 
+![plot of chunk unnamed-chunk-1](figure/unnamed-chunk-1-1.png) 
 
 The mean and median of the total number of steps taken per day are:
 
@@ -60,7 +51,7 @@ intervals<- strptime(sprintf("%04d", as.numeric(names(avgIntSteps))), format="%H
 plot(intervals, avgIntSteps, type="l", breaks=5, xlab="Intervals", ylab="Steps", main="Avg Steps Taken by Interval")
 ```
 
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png) 
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png) 
 
 The 5-minute interval that has the maximum number of steps, on average across all the days in the dataset, was 835. 
 
@@ -113,7 +104,7 @@ TotalStep2<-summarize(activity2, steps=sum(steps))
 hist(TotalStep2$steps, breaks=61, main="Total Steps Taken Per Day", xlab="# Steps")
 ```
 
-![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8-1.png) 
+![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7-1.png) 
 
 ```r
 mean(TotalStep2$steps)
@@ -158,4 +149,4 @@ AvgSteps<-summarize(paneldata,steps=mean(steps))
 ggplot(AvgSteps, aes(x=interval, y=steps))+geom_line(color="blue")+facet_grid(dayofweek~.)
 ```
 
-![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10-1.png) 
+![plot of chunk unnamed-chunk-9](figure/unnamed-chunk-9-1.png) 
