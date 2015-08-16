@@ -158,5 +158,4 @@ ggplot(AvgSteps, aes(x=interval, y=steps))+geom_line(color="blue")+facet_grid(da
 ```
 
 ![plot of chunk unnamed-chunk-9](figure/unnamed-chunk-9-1.png) 
-#get figures to knit  library(knitr)
-# knit2html("PA1_template.Rmd")
+
