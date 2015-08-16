@@ -103,3 +103,5 @@ paneldata<-group_by(data2, dayofweek, interval)
 AvgSteps<-summarize(paneldata,steps=mean(steps))
 ggplot(AvgSteps, aes(x=interval, y=steps))+geom_line(color="blue")+facet_grid(dayofweek~.)
 ```
+#get figures to knit  library(knitr)
+# knit2html("PA1_template.Rmd")
